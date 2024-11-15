@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar elemento array</title>
+</head>
+<body>
+    <h1>Verificando resultado procurado com item e objeto </h1>
+    <h2>
+        <p>
+            É possível realizar com dados contidos no JavaScript, bem como com dados inseridos pelo usuário.
+        </p>
+        
+    </h2>
+
+    <fieldset>
+        <h2><strong>Dados contidos no JavaScript</strong></h2>
+        <div>           
+           <p id="objetoProcurado-js"></p>
+        </div>
+        
+        <div>
+            <p id="validacao-js"></p>
+        </div>
+        <div>
+            <p id="lista-js"></p>
+        </div>
+
+        <button class="botao" id="arrayBotaoJS" onclick="arrayBotaoJS()">Verificar</button>
+    </fieldset>
+    
+    <br>
+
+    <fieldset>
+        <h2><strong>Dados inseridos pelo usuário</strong></h2><br>
+        <div>
+            <label><strong>Id:</strong></label>
+            <input type="number" name="id-usuario" id="id-usuario" >
+        </div>
+
+        <div>
+            <label><strong>Nome:</strong></label>
+            <input type="value" name="nome-usuario" id="nome-usuario" >
+        </div>
+
+        <div>
+            <label><strong>Idade:</strong></label>
+            <input type="value" name="idade-usuario" id="idade-usuario" >
+        </div>
+        
+        <div>
+            <p id="objetoProcurado-usuario"></p>
+        </div>
+        <div>
+        <p id="validacao-usuario"></p>
+        </div>
+
+        <div>
+            <p id="lista-usuario"></p>
+        </div>
+
+        <button class="botao" id="arrayBotaoUsuario" onclick="arrayBotaoUsuario()">Verificar</button>
+    </fieldset>
+    <script src="Verficando objeto.js"></script>
+</body>
+</html>
