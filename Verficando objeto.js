@@ -23,20 +23,17 @@ let alunoProcurado = {id: 2, nome: 'Maria', idade: 22};
 
 let alunosJSON = JSON.stringify(alunos);
 
-//ver como resumir o código para fazer uma função servir para os dois botões
 function arrayBotaoJS() {
     
     let alunoProcuradoOrganizado = `id: ${alunoProcurado.id}; nome: ${alunoProcurado.nome}; idade: ${alunoProcurado.idade}`;
 
-    let resultado = document.getElementById('objetoProcurado-js');
-    resultado.innerHTML = `O objeto procurado é ${alunoProcuradoOrganizado}.`;
+    let resultado = document.getElementById('objetoProcurado-js')
 
     let listaAlunos = document.getElementById('lista-js');
-    listaAlunos.innerHTML = `Alunos: <br> ${alunosJSON}`; //verificar como tirar aspas e colocar parágrafo
 
     let validacao = document.getElementById('validacao-js');
     
-    verificacaoArray(alunos, alunoProcurado, validacao)
+    verificacaoArray(alunos, alunoProcurado, validacao, resultado, alunoProcuradoOrganizado, listaAlunos)
 }
 
 function arrayBotaoUsuario() {
@@ -48,23 +45,22 @@ function arrayBotaoUsuario() {
 
     let alunoArrayJSON = JSON.stringify(alunoArray)
 
-    //console.log("aluno array: ", alunoArray);
-
     let resultado = document.getElementById('objetoProcurado-usuario');
-    resultado.innerHTML = `O objeto procurado é ${alunoArrayJSON}.`;
 
     let listaAlunos = document.getElementById('lista-usuario');
-    listaAlunos.innerHTML = `Alunos: <br> ${alunosJSON}`;
 
     let validacao = document.getElementById('validacao-usuario');
 
-    verificacaoArray(alunos, alunoArray, validacao)    
+    verificacaoArray(alunos, alunoArray, validacao, resultado, alunoArrayJSON, listaAlunos)    
 
 }
 
-//ver como colocar validação para cada um dos botões 
-function verificacaoArray(aluns, alunProcurado, validacao) {
+function verificacaoArray(aluns, alunProcurado, validacao, resultado, alunoProcOrganizado, listaAlunos) {
     let objetoEstaPresente = verificarObjetoNoArray(aluns, alunProcurado);
+
+    resultado.innerHTML = `O objeto procurado é ${alunoProcOrganizado}.`;
+    
+    listaAlunos.innerHTML = `Alunos: <br> ${alunosJSON}` //verificar como tirar aspas e colocar parágrafo
 
     if (objetoEstaPresente) {
         validacao.innerHTML = 'O aluno está presente no array.';
